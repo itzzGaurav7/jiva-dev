@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8" />
+    <title>ML API</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="i/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="i/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="i/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="i/css"
+    />
+    <link rel="stylesheet" href="heart_disease\static\css\style.css" />
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>Checking if a person has diabetes or not</h1>
+
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="/predict" method="post">
+        <input
+          type="int"
+          name="Age"
+          placeholder="Age"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Gender_Female"
+          placeholder="Gender_Female"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Gender_Male"
+          placeholder="Gender_Male"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Polyuria_No"
+          placeholder="Polyuria_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Polyuria_Yes"
+          placeholder="Polyuria_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Polydipsia_No"
+          placeholder="Polydipsia_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Polydipsia_Yes"
+          placeholder="Polydipsia_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="suddenweightloss_No"
+          placeholder="suddenweightloss_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="suddenweightloss_Yes"
+          placeholder="suddenweightloss_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="weakness_No"
+          placeholder="weakness_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="weakness_Yes"
+          placeholder="weakness_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Polyphagia_No"
+          placeholder="Polyphagia_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Polyphagia_Yes"
+          placeholder="Polyphagia_Yes"
+          required="required"
+        /><br />
+
+        <input
+          type="int"
+          name="Genitalthrush_No"
+          placeholder="Genitalthrush_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Genitalthrush_Yes"
+          placeholder="Genitalthrush_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="visualblurring_No"
+          placeholder="visualblurring_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="visualblurring_Yes"
+          placeholder="visualblurring_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Itching_No"
+          placeholder="Itching_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Itching_Yes"
+          placeholder="Itching_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Irritability_No"
+          placeholder="Irritability_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Irritability_Yes"
+          placeholder="Irritability_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="delayedhealing_No"
+          placeholder="delayedhealing_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="delayedhealing_Yes"
+          placeholder="delayedhealing_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="partialparesis_No"
+          placeholder="partialparesis_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="partialparesis_Yes"
+          placeholder="partialparesis_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="musclestiffness_No"
+          placeholder="musclestiffness_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="musclestiffness_Yes"
+          placeholder="musclestiffness_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Alopecia_No"
+          placeholder="Alopecia_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Alopecia_Yes"
+          placeholder="Alopecia_Yes"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Obesity_No"
+          placeholder="Obesity_No"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="Obesity_Yes"
+          placeholder="Obesity_Yes"
+          required="required"
+        /><br />
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+
+      <br />
+      <br />
+    </div>
+    {{prediction_text}}
+  </body>
+</html>

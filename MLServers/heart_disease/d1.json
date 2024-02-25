@@ -1,0 +1,12 @@
+{
+  "Age": 40,
+  "Sex": 1,
+  "RestingBP": 120,
+  "FastingBS": 0,
+  "MaxHR": 172,
+  "ExerciseAngina": 0,
+  "ChestPainType_0": 1,
+  "ChestPainType_1": 0,
+  "ChestPainType_2": 1,
+  "ChestPainType_3": 1
+}
